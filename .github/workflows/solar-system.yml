@@ -33,7 +33,8 @@ jobs:
           with:
             #path: node_modules
             path: ~/.npm
-            key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+            #key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+            key: ${{ runner.os }}-node-modules-${{ hashFiles('package-lock.json') }}
 
         - name: Unit Testing
           run: npm test
